@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="80dp"
+    android:background="#F5F5F7"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".CartActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.9"
+        android:paddingBottom="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginVertical="8dp"
+        android:background="@color/material_dynamic_neutral90" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Estimated Total: $0"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/addItemsBtn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="Add Items"
+            app:backgroundTint="@color/design_default_color_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/checkoutBtn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            app:backgroundTint="@color/design_default_color_primary" />
+    </LinearLayout>
+
+</LinearLayout>
